@@ -1,0 +1,156 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  color: $light-grey-primary-1;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  letter-spacing: 0.7rem;
+  font-size: 3rem;
+}
+
+#icons {
+  cursor: pointer;
+  &:hover {
+    color: $light-grey-primary-1;
+  }
+}
+
+#text {
+  color: var(--color-secondary-light-1);
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: normal;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-tertiary-hover);
+
+    transform: translate(2px);
+  }
+}
+#text2 {
+  color: var(--color-secondary-light-1);
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: normal;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-tertiary-hover);
+
+    transform: translate(2px);
+  }
+}
+
+#textAll {
+  color: $Bright-Blue-dark;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: normal;
+  cursor: pointer;
+
+  &:hover {
+    color: $Bright-Blue;
+
+    transform: translate(2px);
+  }
+}
+
+#name {
+  &::placeholder {
+    color: var(--color-secondary-light-1);
+  }
+}
+
+#name,
+textarea {
+  caret-color: $Bright-Blue;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Define a class for the blur effect */
+.blur-effect {
+  filter: blur(0.7px);
+}
+.cross-line {
+  text-decoration: line-through;
+  color: var(--color-secondary-light-1);
+  font-size: 2rem;
+}
+span {
+  cursor: pointer;
+  color: $light-grey-blue-1;
+  font-size: 4rem;
+  padding: 1rem;
+
+  &:hover {
+    color: $light-grey-primary-1;
+  }
+}
+
+.round {
+  content: '';
+  height: 2.2rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    rgba($color-Background-blue, 0.8),
+    rgba($color-Background-pink, 0.7)
+  );
+}
+
+.links {
+  text-decoration: none;
+  color: $light-grey-primary-2;
+  &:hover {
+    color: $light-grey-primary-1;
+  }
+}
+
+.check {
+  background-image: linear-gradient(
+    rgba($color-Background-blue, 0.8),
+    rgba($color-Background-pink, 0.7)
+  );
+  border-radius: 50%;
+  height: 2.8rem;
+  width: 2.89rem;
+  position: absolute;
+  left: 0.1%;
+  top: 3%;
+  &-sign {
+    position: relative;
+    left: 10%;
+    top: 5%;
+  }
+}
+
+.drag {
+  position: fixed;
+  top: 95%;
+  left: 40%;
+  text-align: center;
+  cursor: pointer;
+  @media only screen and (max-width: $bp-small) {
+    left: 35%;
+  }
+  @media only screen and (max-width: $bp-bit) {
+    left: 33%;
+    text-align: center;
+  }
+  &-text {
+    color: var(--color-primary--4);
+    font-size: 1.5rem;
+  }
+}

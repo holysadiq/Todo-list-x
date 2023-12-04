@@ -1,0 +1,47 @@
+.header {
+  height: 35vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  @media only screen and (max-width: $bp-small) {
+    height: 20vh;
+  }
+  @media only screen and (max-width: $bp-bit) {
+    height: 20vh;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 25%;
+    right: 67%;
+    @media only screen and (max-width: $bp-largest) {
+      top: 35%;
+      right: 77%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      right: 70%;
+    }
+    @media only screen and (max-width: $bp-bit) {
+      right: 60%;
+    }
+    text-align: center;
+    &:hover {
+      transform: scale(1.3) translateY(-0.2rem);
+      transition: color 0.3s ease;
+    }
+  }
+
+  &__icon-box {
+    position: absolute;
+
+    text-align: center;
+    top: 25%;
+    left: 66%;
+
+    @media only screen and (max-width: $bp-largest) {
+      top: 35%;
+      left: 88%;
+    }
+  }
+}

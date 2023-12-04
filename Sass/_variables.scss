@@ -1,0 +1,85 @@
+/*
+- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Unsaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+*/
+
+/*BLUE LIGHT FIXME*/
+
+:root {
+  /// Light Mode
+  --color-primary--1: hsl(0, 0%, 98%);
+  --color-primary--2: hsl(236, 33%, 92%);
+  --color-primary--3: hsl(233, 11%, 84%);
+  --color-primary--4: hsl(236, 9%, 61%);
+  --color-primary--5: hsl(235, 19%, 35%);
+
+  /// Dark Mode
+
+  --color-secondary-light-1: hsl(236, 33%, 92%);
+  --color-secondary-light-2: hsl(234, 39%, 85%);
+  --color-secondary--1: hsl(235, 19%, 35%);
+  --color-secondary--2: hsl(237, 14%, 26%);
+  --color-secondary-3: hsl(235, 24%, 19%);
+  --color-secondary--4: hsl(235, 21%, 11%);
+
+  --color-tertiary-hover: hsl(236, 33%, 92%);
+}
+
+$Bright-Blue: hsl(220, 98%, 61%);
+$Bright-Blue-dark: hsl(228, 45%, 44%);
+
+$color-Background-blue: hsl(192, 100%, 67%);
+$color-Background-pink: hsl(280, 87%, 65%);
+
+/*GREY LIGHT BUGS*/
+$light-grey-primary-1: hsl(0, 0%, 98%);
+$light-grey-primary-2: hsl(236, 33%, 92%);
+$light-grey-primary-3: rgb(147, 152, 157);
+
+$light-grey-blue-1: hsl(233, 11%, 84%);
+$light-grey-blue-3: hsl(235, 19%, 35%);
+
+/*GREY DARK BUGS*/
+$light-grey-secondary-light-hover: hsl(236, 33%, 92%);
+$light-grey-secondary-light-1: hsl(234, 39%, 85%);
+$light-grey-secondary-light-2: hsl(234, 11%, 52%);
+$light-grey-secondary-light-3: hsl(233, 14%, 35%);
+$light-grey-secondary-light-4: hsl(237, 14%, 26%);
+
+$light-grey-secondary-dark-2: hsl(235, 21%, 11%);
+
+/*BOX SHADOW VIDEO*/
+$box-shadow: 1rem 1rem 0.9rem rgba($light-grey-secondary-dark-2, 0.5);
+$box-shadow-2: 0 1rem 1rem rgba($light-grey-secondary-dark-2, 0.5);
+
+/*BOARDER VIDEO*/
+$border-radius: 3px 3px 3px 3px;
+$border-round: 1px solid $color-Background-pink;
+$border-bottom: 0.2px solid $light-grey-blue-3;
+
+/*PADDING VIDEO*/
+$padding-primary: 2rem 2rem;
+
+$checkbox-size: 20px;
+$checkbox-border: #cecece;
+
+$bp-largest-1: 1440px;
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-mid: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-bit: 31.25em; //500px

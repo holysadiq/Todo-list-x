@@ -1,0 +1,393 @@
+.layouts {
+  // height: 50vh;
+  width: 40vw;
+  position: absolute;
+  left: 27%;
+  top: 32%;
+  background-color: var(--color-secondary-3);
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  @media only screen and (max-width: $bp-largest) {
+    left: 10%;
+    width: 82vw;
+  }
+  @media only screen and (max-width: $bp-small) {
+    top: 20%;
+  }
+  @media only screen and (max-width: $bp-bit) {
+    top: 19%;
+  }
+
+  &__radio-items {
+    padding: $padding-primary;
+    border-bottom: $border-bottom;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__radio-puts {
+    position: absolute;
+    opacity: 0;
+
+    // Text
+    & + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      line-height: $checkbox-size;
+      padding-left: $checkbox-size + 10;
+      // font-size: $checkbox-size - 2;
+
+      // Checkbox
+      &:before {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        content: '';
+        background: transparent;
+        width: $checkbox-size;
+        height: $checkbox-size;
+
+        border: 1px solid var(--color-secondary-light-2);
+        border-radius: 50%;
+        transition: 200ms ease-in-out all;
+      }
+
+      &:hover {
+        &:before {
+          border: $border-round;
+        }
+      }
+      // Tick
+      &:after {
+        position: absolute;
+        display: block;
+        top: 5px;
+        left: 8px;
+        content: '';
+        width: 5px;
+        height: 10px;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transform: rotate(45deg);
+
+        transition: 200ms ease-in-out all;
+      }
+    }
+
+    // Hover
+    & + label:hover {
+      color: #333;
+    }
+
+    // Focus
+    & + label:focus {
+      outline: none;
+    }
+
+    // Checked
+    &:checked {
+      & + label {
+        &:before {
+          background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+          box-shadow: none;
+        }
+        &:after {
+          border-color: white;
+        }
+      }
+    }
+
+    // Disabled
+    &:disabled {
+      & + label {
+        &:before {
+          background: #f2f2f2; // Disabled colour
+          box-shadow: none;
+        }
+        &:after {
+          border-color: transparent;
+        }
+      }
+    }
+
+    // Disabled Checked
+    &:checked:disabled {
+      & + label {
+        &:before {
+          background: #f2f2f2;
+          box-shadow: none;
+        }
+        &:after {
+          border-color: #cecece;
+        }
+      }
+    }
+  }
+
+  &__radio-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid var(--color-secondary-light-2);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 0.5rem;
+    cursor: pointer;
+    margin-right: 1.4rem;
+
+    &:hover {
+      border: $border-round;
+    }
+    &::after {
+      content: '';
+      // display: none;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(
+        rgba($color-Background-blue, 0.8),
+        rgba($color-Background-pink, 0.7)
+      );
+
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-clear {
+    margin-right: 1rem;
+    padding: 0rem;
+
+    &:hover {
+      transform: scale(1) translateY(-0.2rem);
+      transition: color 0.3s ease;
+    }
+  }
+
+  &__radio-tikis {
+    color: var(--color-secondary-light-1);
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: normal;
+    cursor: pointer;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 1fr;
+
+    &:hover {
+      color: var(--color-tertiary-hover);
+      transform: translate(2px);
+    }
+  }
+}
+
+.top {
+  background-color: var(--color-secondary-3);
+  top: 20%;
+  left: 27%;
+  width: 40vw;
+  text-align: start;
+  position: fixed;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  z-index: 68990079;
+  @media only screen and (max-width: $bp-largest) {
+    left: 10%;
+    width: 82vw;
+  }
+  @media only screen and (max-width: $bp-small) {
+    top: 13%;
+  }
+  @media only screen and (max-width: $bp-bit) {
+    top: 12.7%;
+  }
+  &__header {
+    padding: $padding-primary;
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.3rem;
+  }
+
+  &__radio-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid var(--color-secondary-light-1);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.9rem;
+    background-image: none;
+
+    &:hover {
+      border: $border-round;
+    }
+  }
+}
+
+.footer {
+  // height: 5vh;
+  background-color: var(--color-secondary-3);
+  top: 100%;
+  width: 40vw;
+  text-align: start;
+  position: absolute;
+  box-shadow: $box-shadow;
+  font-size: 1.3rem;
+  @media only screen and (max-width: $bp-largest) {
+    width: 82vw;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 65px 1fr 120px;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: 50px 1fr 120px;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr 100px;
+      padding: 0.6rem;
+    }
+    @media only screen and (max-width: $bp-bit) {
+      grid-template-columns: 1fr 100px;
+      padding: 0.6rem;
+    }
+
+    &--elements {
+      color: var(--color-secondary-light-1);
+      padding: 0.5rem;
+      margin-top: 1.5rem;
+      margin-left: 0.6rem;
+      &:hover {
+        color: var(--color-tertiary-hover);
+        cursor: pointer;
+        transform: scale(1) translateY(-0.1rem);
+        transition: color 0.3s ease;
+      }
+      &-mid {
+        margin-left: -3rem;
+        display: grid;
+        grid-template-columns: 20px repeat(2, 40px);
+        color: var(--color-secondary-light-1);
+        padding: $padding-primary;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+          display: none;
+        }
+        @media only screen and (max-width: $bp-bit) {
+          display: none;
+        }
+
+        &--1 {
+          color: $Bright-Blue-dark;
+          @media only screen and (max-width: $bp-bit) {
+            display: none;
+          }
+          &:hover {
+            color: $Bright-Blue;
+            cursor: pointer;
+            transform: scale(1) translateY(-0.1rem);
+            transition: color 0.3s ease;
+          }
+        }
+        &--2,
+        &--3 {
+          @media only screen and (max-width: $bp-bit) {
+            display: none;
+          }
+          &:hover {
+            color: var(--color-tertiary-hover);
+            cursor: pointer;
+            transform: scale(1) translateY(-0.1rem);
+            transition: color 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+.second {
+  // box-shadow: $box-shadow;
+  // @media only screen and (max-width: $bp-largest-1) {
+  //   display: none;
+  // }
+  display: none;
+  @media only screen and (max-width: $bp-small) {
+    background-color: var(--color-secondary-3);
+
+    width: 82vw;
+    text-align: start;
+    position: absolute;
+    box-shadow: $box-shadow-2;
+    left: 0%;
+    top: 100%;
+    margin-top: 7.5rem;
+    border-radius: $border-radius;
+    display: grid;
+    grid-template-columns: repeat(3, 132px);
+    padding: 2rem;
+    // height: 10vh;
+
+    &-text {
+      &:hover {
+        color: rgb(214, 220, 225);
+        cursor: pointer;
+        transform: scale(1) translateY(-0.1rem);
+        transition: color 0.3s ease;
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-bit) {
+    background-color: var(--color-secondary-3);
+
+    width: 82vw;
+    text-align: start;
+    position: absolute;
+    box-shadow: $box-shadow-2;
+    left: 0%;
+    top: 100%;
+    margin-top: 7.5rem;
+    border-radius: $border-radius;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    padding: 2rem;
+    // height: 10vh;
+
+    &-text {
+      &:hover {
+        color: rgb(214, 220, 225);
+        cursor: pointer;
+        transform: scale(1) translateY(-0.1rem);
+        transition: color 0.3s ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+/*BODY FIXME*/
+
+body {
+  background-color: $light-grey-secondary-dark-2;
+}
+
+.color-changed {
+  $new-color: $light-grey-primary-1; // Changed color value
+  background-color: $light-grey-primary-1;
+}
+
+.color-changed body {
+  background-color: $light-grey-primary-1;
+}
+/*HEADER FIXME*/
+header {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-Background-blue, 0.1),
+      rgba($color-Background-pink, 0.3)
+    ),
+    url(../images/bg-desktop-dark.jpg);
+  height: 35vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  @media only screen and (max-width: $bp-bit) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-Background-blue, 0.1),
+        rgba($color-Background-pink, 0.3)
+      ),
+      url(../images/bg-mobile-dark.jpg);
+  }
+}
+.image-changed {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-Background-blue, 0.1),
+      rgba($color-Background-pink, 0.3)
+    ),
+    url(../images/bg-desktop-light.jpg);
+
+  @media only screen and (max-width: $bp-bit) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-Background-blue, 0.1),
+        rgba($color-Background-pink, 0.3)
+      ),
+      url(../images/bg-mobile-light.jpg);
+  }
+}
+
+.image-changed header {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-Background-blue, 0.1),
+      rgba($color-Background-pink, 0.3)
+    ),
+    url(../images/bg-desktop-light.jpg);
+}
+
+/*ICON DARK MODE FIXME*/
+.icon-changed {
+  content: url('../images/icon-moon.svg');
+  /* Specify other styles for the changed icon */
+}
+
+/*RADIO BUTTONS FIXME*/
+
+.top__radio-button,
+.layouts__radio-button {
+  border: 1px solid $light-grey-primary-2;
+
+  &:hover {
+    border: $border-round;
+  }
+}
+
+.radio-changed {
+  $new-color: var(--color-primary--4);
+  border: 1px solid var(--color-primary--4);
+}
+
+.radio-changed .top__radio-button,
+.layouts__radio-button {
+  border: 1px solid var(--color-primary--4);
+}
+
+/*LAYOUTS  FIXME*/
+
+.layouts {
+  background-color: var(--color-secondary-3);
+}
+
+.layouts-changed {
+  $new-color: $light-grey-primary-1; // Changed color value
+  background-color: $light-grey-primary-1;
+}
+
+.layouts-changed .layouts {
+  background-color: $light-grey-primary-1;
+}
+
+/*TOP  FIXME*/
+.top {
+  background-color: var(--color-secondary-3);
+}
+
+.top-changed {
+  $new-color: $light-grey-primary-1; // Changed color value
+  background-color: $light-grey-primary-1;
+  color: var(--color-secondary-3);
+}
+
+.top-changed .top {
+  background-color: $light-grey-primary-1;
+  color: var(--color-secondary-3);
+}
+/*SEARCH  FIXME*/
+.search {
+  color: var(--color-secondary-3);
+  background-color: var(--color-secondary-3);
+}
+
+.top-changed {
+  $new-color: $light-grey-primary-1; // Changed color value
+  $new-color: $light-grey-primary-2; // Changed color value
+  background-color: $light-grey-primary-1;
+  color: $light-grey-primary-2;
+}
+
+.top-changed .search {
+  background-color: $light-grey-primary-1;
+  color: $light-grey-primary-2;
+}
+
+/*FOOTER  FIXME*/
+.footer {
+  background-color: var(--color-secondary-3);
+}
+
+.footer-changed {
+  $new-color: $light-grey-primary-1; // Changed color value
+  background-color: $light-grey-primary-1;
+}
+
+.top-changed .footer {
+  background-color: $light-grey-primary-1;
+}
